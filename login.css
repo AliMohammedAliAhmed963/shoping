@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* start header */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    z-index: 20;
+}
+
+
+header .logo a {
+    text-transform: capitalize;
+    color: white;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li {
+
+    padding: 20px 0;
+
+}
+
+
+header nav ul li a {
+    position: relative;
+    margin: 0 20px;
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+header nav li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    width: 0;
+    height: 3px;
+    background-color: aliceblue;
+    transition: 0.4s;
+}
+
+header nav li a:hover::after {
+    width: 100%;
+}
+
+header nav .logi {
+    margin-left: 60px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    border: 2px solid white;
+    border-radius: 6px;
+    transition: 0.4s;
+}
+
+header nav .logi:hover {
+    background-color: rgba(255, 255, 255, 0.685);
+    color: black;
+}
+
+/* and header */
+
+body {
+    background-image: url(imag_login.jpg);
+    height: 120vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.178);
+
+}
+
+.div_login {
+    position: relative;
+    padding: 20px 30px;
+    width: 400px;
+    height: 470px;
+    background-color: rgba(255, 255, 255, 0.432);
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.842);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    z-index: 20;
+    overflow: hidden;
+    transition: 1s;
+    transform: scale(0);
+
+}
+
+.div_login.activehight {
+    height: 560px;
+}
+
+.div_login.active {
+    transition: 1s;
+    transform: scale(1);
+}
+
+.login_up {
+    transform: translateY(0);
+    transition: 1s;
+}
+
+.login_up.active {
+    transform: translateY(-820px);
+    transition: 1s;
+
+}
+
+.regist_up.active {
+    width: 100%;
+    transform: translateY(-400px);
+    transition: 1s;
+}
+
+.regist_up {
+    transform: translateY(820px);
+    transition: 1s;
+}
+
+.login_up .clone {
+    position: absolute;
+    top: -41px;
+    right: -30px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-bottom-left-radius: 10px;
+}
+
+.regist_up .clone {
+    position: absolute;
+    top: -55px;
+    right: -29px;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-bottom-left-radius: 10px;
+}
+
+.form h2 {
+    text-align: center;
+    margin: 20px 0;
+    text-transform: capitalize;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.form form {
+    text-align: center;
+}
+
+.form form .eamil,
+.form form .password,
+.form form .ceck {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.form form .eamil,
+.form form .password {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid black;
+}
+
+.form form .eamil input,
+.form form .password input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.form form .eamil label,
+.form form .password label {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    font-weight: bold;
+    transition: 0.4s;
+    font-size: 15px;
+    pointer-events: none;
+    text-transform: capitalize;
+}
+
+.form form input::placeholder {
+    color: black;
+}
+
+.form form .ceck #label1,
+.form form .ceck #label2 {
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.form form .ceck label {
+    text-transform: capitalize;
+}
+
+.form form .ceck a {
+    color: black;
+    cursor: pointer;
+    text-transform: capitalize;
+
+}
+
+.form form .ceck a:hover {
+    color: rgb(15, 69, 245);
+    text-decoration: underline;
+}
+
+.form form button {
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 0;
+    width: 100%;
+    font-weight: 900;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    background-color: rgb(1, 9, 20);
+}
+
+.form form p {
+    text-transform: capitalize;
+}
+
+.form form p a {
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 5px;
+    color: rgb(9, 54, 139);
+    text-transform: capitalize;
+}
+
+
+
+header nav .bars {
+    display: none;
+}
+
+@media (max-width:900px) {
+    header nav {
+        position: relative;
+    }
+
+    header nav .logi {
+        margin-right: 30px;
+    }
+
+    header nav .bars {
+        display: block;
+        order: 3;
+        border: 2px solid white;
+        padding: 10px 15px;
+        color: white;
+        cursor: pointer;
+    }
+
+    header nav ul {
+        position: absolute;
+        top: 80px;
+        bottom: 400px;
+        right: -2000px;
+        text-align: center;
+        flex-direction: column;
+        width: 400px;
+        height: 60vh;
+        line-height: 35px;
+        background-color: rgba(255, 255, 255, 0.473);
+        transition: 1s;
+        z-index: 8000;
+        color: black;
+    }
+
+    header nav ul.scle {
+        right: 0;
+    }
+
+    header nav ul li a {
+        color: black;
+    }
+
+    header nav .logi {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width:600px) {
+
+    .div_login {
+        width: 80%;
+    }
+}
+
+@media (max-width:400px) {
+    .form form .ceck {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 20px;
+    }
+
+
+    header nav .logi {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 6px;
+        transition: 0.4s;
+    }
+
+    nav .bars {
+        margin-right: -12px;
+    }
+
+    .div_login {
+        width: 90%;
+    }
+
+    header nav ul {
+        width: 250px;
+    }
+
+    .regist_up .clone {
+        top: -75px;
+        right: -29px;
+
+    }
+
+    .div_login.activehight {
+        height: 590px;
+    }
+}
